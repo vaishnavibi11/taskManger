@@ -30,7 +30,7 @@ export default function Home() {
     }
     const getUser=async()=>{
       const data={url:'https://devza.com/tests/tasks/listusers',method:'GET'}
-      const res= await axios.post('http://localhost:3000/api/listusers',data)
+      const res= await axios.post('https://6258f70665139b000914eba6--rococo-frangollo-67dbdd.netlify.app/api/listusers',data)
       console.log(res.data.data)
       setUser(res.data.data.users)
     }
