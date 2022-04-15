@@ -31,7 +31,7 @@ export default function Home() {
     const getUser=async()=>{
       console.log()
       const data={url:'https://devza.com/tests/tasks/listusers',method:'GET'}
-      const res= await axios.post(window.location.href+'api/listusers',data)
+      const res= await axios.post('https://taskmanger11.herokuapp.com/'+'api/listusers',data)
       console.log(res.data.data)
       setUser(res.data.data.users)
     }
