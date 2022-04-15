@@ -24,7 +24,7 @@ export default function Home() {
     const getData=async()=>{
 
       const data={url:'https://devza.com/tests/tasks/list',method:'GET'}
-      const res= await axios.post('http://localhost:3000/api/listusers',data)
+      const res= await axios.post('https://taskmanger11.herokuapp.com/api/listusers',data)
       console.log(res.data.data)
       setValue(res.data.data)
     }
@@ -66,7 +66,7 @@ export default function Home() {
   const deleteTask=async(taskid)=>{
     const data={url:'https://devza.com/tests/tasks/delete',method:'POST',taskid,
    message: mesageText,due_date:date,priority,assigned_to:assign}
-    const res= await axios.post('http://localhost:3000/api/listusers',data)
+    const res= await axios.post('https://taskmanger11.herokuapp.com/api/listusers',data)
     
     if(!res.data.data.error)
     {
@@ -89,7 +89,7 @@ export default function Home() {
   const updateTask=async()=>{
   const data={url:'https://devza.com/tests/tasks/update',method:'POST',taskid,
    message: mesageText,due_date:date,priority,assigned_to:assign,taskid}
-    const res= await axios.post('http://localhost:3000/api/listusers',data)
+    const res= await axios.post('https://taskmanger11.herokuapp.com/api/listusers',data)
     
     if(!res.data.data.error)
     {
