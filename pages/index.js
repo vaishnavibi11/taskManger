@@ -44,7 +44,7 @@ export default function Home() {
   const createTask=async()=>{
     const data={url:'https://devza.com/tests/tasks/create',method:'POST',
    message: mesageText,due_date:date,priority,assigned_to:assign}
-    const res= await axios.post('http://localhost:3000/api/listusers',data)
+    const res= await axios.post('https://taskmanger11.herokuapp.com/api/listusers',data)
     
     if(!res.data.data.error)
     {
